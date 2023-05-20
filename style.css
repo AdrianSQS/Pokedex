@@ -1,0 +1,342 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+/* style */
+
+
+body {
+  font-family: 'Exo', sans-serif;
+  font-weight: 400;
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: #5c5c5cad;
+  color: #111111;
+
+  background-image: url(./images/fundo-dia.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  background-color: #212121;
+  color: #f5f5f5;
+  background-image: url(../images/fundo-noite.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 3.8rem 1.0rem 3.8rem;
+}
+
+header .logo, .sun-moon {
+  width: 4.0rem;
+  transition: 0.3s ease-out;
+}
+
+#theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header .logo:hover, .sun-moon:hover {
+  transform: scale(1.2);
+}
+
+main {
+  padding: 2.5rem;
+}
+
+.pokemon-listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.0rem;
+  justify-content: center;
+}
+
+.link-pokemon {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pokemon-card {
+  background-color: #e5ebf0;
+  width: 20.0rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+  transition: 0.3s ease-out;
+  box-shadow: 3px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  
+}
+
+.dark-mode .pokemon-card {
+  background-color: rgb(129, 129, 129);
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  border: 0.1rem solid #333333;
+  border-radius: 1.0rem;
+}
+
+.information span {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.5rem;
+  font-family: 'Exo', sans-serif;
+  font-weight: 800;
+}
+
+.gif {
+  width: 9.0rem;
+  height: 9.0rem;
+}
+
+.charmeleon {
+  margin-left: 2.0rem;
+}
+
+.squirtle {
+  margin-left: 0.5rem;
+}
+
+.types {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.type {
+  padding: 0.8rem 1.0rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-family: 'Exo', sans-serif;
+  font-weight: 600;
+}
+
+.gram {
+  background-color: #9bcc50;
+  color: white;
+}
+
+.poison {
+  background-color: #b97fc9;
+  color: white;
+}
+
+.fire {
+  background-color: #fd7d24;
+  color: white;
+}
+
+.flying {
+  background: linear-gradient(180deg, #3dc7ef 45%, #bdb9b8 50%);
+  background-color: #3dc7ef;
+  color: #212121;
+}
+
+.water {
+  color: white;
+  background-color: #4592c4;
+}
+
+.dark {
+  color: white;
+  background-color: #333333;
+}
+
+.description {
+  max-height: 8.0rem;
+  overflow-y: scroll;
+  font-size: 1.5rem;
+  padding-right: 1.0rem;
+  font-family: 'Exo', sans-serif;
+}
+
+footer h2 {
+  color: #e5ebf0;
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  margin-top: 3.0rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+footer p {
+  color: #e5ebf0;
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 0.1rem solid #e5ebf0;
+  border-radius: 1.0rem;
+  padding: 0.5rem;
+  width: 19rem;
+  margin: 0.7rem auto 5rem;
+}
+
+.dark-mode footer p {
+  color: #e5ebf0;
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 0.1rem solid #e5ebf0;
+  border-radius: 1.0rem;
+  padding: 0.5rem;
+  width: 19rem;
+  margin: 0.7rem auto;
+}
+
+
+/* modo claro */
+.green:hover {
+  background-color: #b4e4c8;
+  transform: scale(1.09);
+}
+
+.orange:hover {
+  background-color: #e4d9b4;
+  transform: scale(1.09);
+}
+
+.blue:hover {
+  background-color: #b4cde4;
+  transform: scale(1.09);
+}
+
+.gray:hover {
+  background-color: #bebebe;
+  transform: scale(1.09);
+}
+
+
+/* modo escuro */
+.dark-mode .green:hover {
+  background-color: #386149;
+  transform: scale(1.09);
+}
+
+.dark-mode .orange:hover {
+  background-color: #966130;
+  transform: scale(1.09);
+}
+
+.dark-mode .blue:hover {
+  background-color: #426c8a;
+  transform: scale(1.09);
+}
+
+.dark-mode .gray:hover {
+  background-color: #666666;
+  transform: scale(1.09);
+}
+
+
+/* scrollbar */
+*::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1e9e9;
+}
+
+* .dark-mode ::-webkit-scrollbar-track {
+  background: #777777;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #632874;
+  border-radius: 1.0rem;
+  border: 0.3rem solid #ffffff;
+} 
+* .dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #242424;
+  border-radius: 1.0rem;
+  border: 0.3rem solid #707070;
+}
+
+
+/* keyframes */
+header {
+  animation-name: up-down;
+  animation-duration: 1.3s;
+  animation-delay: 1.0s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes up-down {
+  0% {
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.link-pokemon {
+  animation-name: to-grow;
+  animation-duration: 1.7s;
+  animation-delay: 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes to-grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+footer {
+  animation-name: down-up;
+  animation-duration: 1.3s;
+  animation-delay: 1.0s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes down-up {
+  0% {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
