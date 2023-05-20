@@ -31,7 +31,6 @@ body {
 }
 
 body.dark-mode {
-  background-color: #212121;
   color: #f5f5f5;
   background-image: url(./images/fundo-noite.png);
   background-repeat: no-repeat;
